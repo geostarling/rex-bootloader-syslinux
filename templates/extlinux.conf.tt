@@ -1,0 +1,14 @@
+
+[% DEFAULT config.timeout = 10 %]
+TIMEOUT [% config.timeout %]
+[% "PROMPT 1" IF config.prompt %]
+[% IF config.default_target %]
+DEFAULT [% config.default_target %]
+[% END %]
+
+[% FOREACH target IN config.targets %]
+LABEL [% target.label %]
+   MENU LABEL [% target.menu_label %]
+   LINUX [% target.kernel %]
+   APPEND [% target.kernel_options.join(' ') %]
+[% END %]

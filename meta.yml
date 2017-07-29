@@ -1,0 +1,7 @@
+Name: Rex::Bootloader::Syslinux
+Description: 
+Author: Jiří Špaček spaceji3@fit.cvut.cz
+License: MIT
+Require:
+PerlRequire:
+  - Term::ANSIColor
