@@ -30,6 +30,7 @@ task 'install_bootloader', sub {
 
 task 'setup', sub {
   my $config = param_lookup "config";
+  # TODO make sure /boot partition is mounted
   file "/boot/extlinux/extlinux.conf",
     content => template("templates/extlinux.conf.tt", config => $config);
 };
